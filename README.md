@@ -1,7 +1,6 @@
 # WebApplicationInstaller
 Web Application Installer
 
-# Microservices .NET Microservices (.NET 8)
 - Es un proyecto en donde se realiza un instalador para hacer una publicacion (ya sea una actualizacion del sitio o crear el sitio nuevo).
 - El proyecto esta realizado en Visual Studio 2022 y se agrego el nugget para poder agregar un "Setup Project for WiX v3" con lo cual se 
         crea un archivo de extension wxs, con una estructura muy parecida a XML al utilizar tags para definir los comandos.
