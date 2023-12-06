@@ -63,6 +63,19 @@
 				<File Id="mainWebConfig" Source="Web.config" />
 				<File Id="mainInstallData" Source="install_data.sql" />
 			</Component>
+			
+			<!--EDITAR UNA CLAVE DE UN CONNECTION-->
+			<Component Id="cmpUpdateSampleXML" Guid="{CE1F79BC-337A-44FA-9D41-7825564B5CC9}" KeyPath="yes">
+				<util:XmlConfig Id="setConnString"
+								File="[MyWebsiteFolder]Web.config"
+								Action="create"
+								On="install"
+								Node="value"
+								Name="connectionString"
+								Value="metadata=res://*/ModelAsset.csdl|res://*/ModelAsset.ssdl|res://*/ModelAsset.msl;provider=System.Data.SqlClient;provider connection string=  &quot;data source=[SERVER_NAME];initial catalog=[DATABASE_NAME];user id=[USER_NAME];password=[PASSWORD_NAME];Max Pool Size=10000;Pooling=True;MultipleActiveResultSets=True;App=EntityFramework&quot;"
+								ElementPath="//configuration/connectionStrings/add[\[]@name='LaundryEntities'[\]]"
+								Sequence="1" />
+			</Component>
 		</ComponentGroup>	
 
 		<CustomAction
